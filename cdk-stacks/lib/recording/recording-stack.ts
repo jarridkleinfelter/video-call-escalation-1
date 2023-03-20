@@ -79,7 +79,7 @@ export class RecordingStack extends cdk.NestedStack {
             vpcSubnets: {
                 subnetType: ec2.SubnetType.PRIVATE
             },
-            minCapacity: 1,
+            minCapacity: 0,
             maxCapacity: 5,
             signals: autoscaling.Signals.waitForMinCapacity({
                 timeout: cdk.Duration.minutes(15)
